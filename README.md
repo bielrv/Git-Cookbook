@@ -5,6 +5,7 @@ This repository contains instructions and information on how to use github.
 desktop. This cheat sheet summarizes commonly used Git command line instructions for quick reference.
 
 1. Git schema
+1. Git files
 1. Start a new Git repository for an existing code base
 1. Git cheat sheet
    * Create repositories
@@ -13,11 +14,22 @@ desktop. This cheat sheet summarizes commonly used Git command line instructions
    * Review history
    * Synchronize changes
 
+***
+
 # 1. Git schema
 
 ![](git-schema.png?raw=true)
 
-# 2. Start a new Git repository for an existing code base
+***
+
+# 2. Git files
+
+- [x] .git -> The Git repository is stored in the same directory as the project itself, in a subdirectory called .git.
+- [x] readme.md -> Generates the html summary you see at the bottom of projects
+- [x] .gitignore -> Specifies intentionally untracked files to ignore 
+- [x] license -> Allows an open source license in the repository to make it easier for other people to contribute
+
+# 3. Start a new Git repository for an existing code base
 ```shell
 cd /path/to/my/codebase
 git init
@@ -46,7 +58,8 @@ git remote -v
 ```
 
 ***
-# 3. Git cheat sheet
+
+# 4. Git cheat sheet
 
 ## Create repositories
 *Start a new repository or obtain one from an existing URL*\
