@@ -7,13 +7,14 @@ desktop. This cheat sheet summarizes commonly used Git command line instructions
 1. Git schema
 1. Git files
 1. Start a new Git repository for an existing code base
+1. Removing folder from remote repository
 1. Git cheat sheet
    * Create repositories
    * Make changes
    * Group Changes
    * Review history
    * Synchronize changes
-
+1. Useful options
 ***
 
 # 1. Git schema
@@ -59,7 +60,18 @@ git remote -v
 
 ***
 
-# 4. Git cheat sheet
+# 4. Removing folder from remote repository
+*This will not remove the folder from your local repository*
+```shell
+git rm -r --cached FolderName
+git commit -m "Removed folder from repository"
+git push origin master
+```
+**Use** `.gitignore` **to ignore that folder in future commits**
+
+***
+
+# 5. Git cheat sheet
 
 ## Create repositories
 *Start a new repository or obtain one from an existing URL*\
@@ -124,7 +136,7 @@ git remote -v
 
 ***
 
-# Usefull options
+# 6. Usefull options
 
 Option | Description
 ------------ | -------------
