@@ -140,7 +140,8 @@ git push origin master
 
 Option | Description
 ------------ | -------------
-**--version** | Prints the Git suite version that the git program came from.
-**--help**| Prints the synopsis and a list of the most commonly used commands.
+**--version**|Prints the Git suite version that the git program came from.
+**--help**|Prints the synopsis and a list of the most commonly used commands.
+**--force**|Useful when repo refuses to update a remote repo. Usually due to ref.
 
 [Useful git cheat sheet PDF](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
