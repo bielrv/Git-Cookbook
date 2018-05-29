@@ -4,33 +4,34 @@ This repository contains instructions and information on how to use github.
 >Git is the open source distributed version control system that facilitates GitHub activities on your laptop or
 desktop. This cheat sheet summarizes commonly used Git command line instructions for quick reference.
 
-1. Git schema
-1. Git files
-1. Start a new Git repository for an existing code base
-1. Removing folder from remote repository
-1. Git cheat sheet
-   * Create repositories
-   * Make changes
-   * Group Changes
-   * Review history
-   * Synchronize changes
-1. Useful options
+1. [Git schema](#1)
+1. [Git files](#2)
+1. [Start a new Git repository for an existing code base](#3)
+1. [Removing folder from remote repository](#4)
+1. [Git cheat sheet](#5)
+   * [Create repositories](#5.1)
+   * [Make changes](#5.2)
+   * [Group Changes](#5.3)
+   * [Review history](#5.4)
+   * [Synchronize changes](#5.5)
+1. [Useful options](#6)
+1. [Setup](#7)
 ***
 
-# 1. Git schema
+# <a id="1"></a> 1. Git schema 
 
 ![](git-schema.png?raw=true)
 
 ***
 
-# 2. Git files
+# <a id="2"></a> 2. Git files
 
 - [x] .git -> The Git repository is stored in the same directory as the project itself, in a subdirectory called .git.
 - [x] readme.md -> Generates the html summary you see at the bottom of projects
 - [x] .gitignore -> Specifies intentionally untracked files to ignore 
 - [x] license -> Allows an open source license in the repository to make it easier for other people to contribute
 
-# 3. Start a new Git repository for an existing code base
+# <a id="3"></a> 3. Start a new Git repository for an existing code base
 ```shell
 cd /path/to/my/codebase
 git init
@@ -60,7 +61,7 @@ git remote -v
 
 ***
 
-# 4. Removing folder from remote repository
+# <a id="4"></a> 4. Removing folder from remote repository
 *This will not remove the folder from your local repository*
 ```shell
 git rm -r --cached FolderName
@@ -71,16 +72,16 @@ git push origin master
 
 ***
 
-# 5. Git cheat sheet
+# <a id="5"></a> 5. Git cheat sheet 
 
-## Create repositories
+## Create repositories </a>
 *Start a new repository or obtain one from an existing URL*\
 `git init [project-name]` creates a **new local repository** with the specified name\
 `git clone [url]` downloads an **existing project** and its entire version history
 
 ***
 
-## Make changes
+##  <a id="5.1"></a>  Make changes 
 *Review edits and craf a commit transaction*\
 `git status` lists all new or modified files to be commited\
 `git diff` shows changes between commits\
@@ -91,7 +92,7 @@ git push origin master
 
 ***
 
-## Group Changes
+## <a id="5.2"></a> Group Changes 
 *Name a series of commits and combine completed efforts*\
 `git branch` lists all local branches in the current repository\
 `git branch [branch-name]` creates a new branch\
@@ -101,7 +102,7 @@ git push origin master
 
 ***
 
-## Refactor filenames
+## <a id="5.3"></a> Refactor filenames 
 *Relocate and remove versioned files*\
 `git rm [file]` deletes the file from the working directory and stages the deletion\
 `git rm --cached [file]` removes the file from version control but preserves the file locally\
@@ -109,7 +110,7 @@ git push origin master
 
 ***
 
-## Review history
+## <a id="5.4"></a> Review history
 *Browse and inspect the evolution of project files*\
 `git log` lists version history for the current branch\
 `git log --follow [file]` lists version history for a file, including renames\
@@ -118,7 +119,7 @@ git push origin master
 
 ***
 
-# Synchronize changes
+## <a id="5.5"></a> Synchronize changes
 *Register a repository bookmark and exchange version history*\
 `git fetch [bookmark]` downloads all history from the repository bookmark\
 `git merge [bookmark]/[branch]` combines bookmark’s branch into current local branch\ 
@@ -136,12 +137,17 @@ git push origin master
 
 ***
 
-# 6. Usefull options
+# <a id="6"></a> 6. Usefull options
 
 Option | Description
 ------------ | -------------
 **--version**|Prints the Git suite version that the git program came from.
 **--help**|Prints the synopsis and a list of the most commonly used commands.
 **--force**|Useful when repo refuses to update a remote repo. Usually due to ref.
+
+# <a id="7"></a> 7. Setup
+`git config --global user.name "[firstname lastname]"` sets a name that is identifiable for credit when review version history
+`git config --global user.email "[valid.email]"` sets an email address that will be associated with each history marker
+`git config --global color.ui auto` sets automatic command line coloring for GIt for easy reviewing
 
 [Useful git cheat sheet PDF](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
