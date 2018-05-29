@@ -144,6 +144,11 @@ Option | Description
 **--version**|Prints the Git suite version that the git program came from.
 **--help**|Prints the synopsis and a list of the most commonly used commands.
 **--force**|Useful when repo refuses to update a remote repo. Usually due to ref.
+**--hard**|Clears staging area and rewrites working tree from a commit when used with reset.
+**--verbose**|Be a little more verbose.
+**--global**|Applies to all repositories.
+**--stats**|Show all commit logs with indications when used with log.
+**--follow**|Shows a file changes even across renames when used with log.
 
 # <a id="7"></a> 7. Setup
 `git config --global user.name "[firstname lastname]"` sets a name that is identifiable for credit when review version history
