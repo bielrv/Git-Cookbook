@@ -15,7 +15,8 @@ desktop. This cheat sheet summarizes commonly used Git command line instructions
    * [Review history](#5.4)
    * [Synchronize changes](#5.5)
 1. [Useful options](#6)
-1. [Setup](#7)
+1. [Git Setup](#7)
+1. [Git Configuration](#8)
 ***
 
 # <a id="1"></a> 1. Git schema 
@@ -150,9 +151,13 @@ Option | Description
 **--stats**|Show all commit logs with indications when used with log.
 **--follow**|Shows a file changes even across renames when used with log.
 
-# <a id="7"></a> 7. Setup
+# <a id="7"></a> 7. Git Setup
 `git config --global user.name "[firstname lastname]"` sets a name that is identifiable for credit when review version history
 `git config --global user.email "[valid.email]"` sets an email address that will be associated with each history marker
 `git config --global color.ui auto` sets automatic command line coloring for GIt for easy reviewing
 
 [Useful git cheat sheet PDF](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+
+# <a id="7"></a> 7. Git Configuration
+`--replace-all` Default behavior is to replace at most one line. This replaces all lines matching the key (and optionally the value_regex).  
+`--add`  Adds a new line to the option without altering any existing values. This is the same as providing ^$ as the value_regex in `--replace-all`
