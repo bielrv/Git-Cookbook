@@ -1,4 +1,5 @@
-# git-cookbook
+# git-cookbook [![Build Status](https://travis-ci.org/bielrv/git-cookbook.png?branch=master)](https://travis-ci.org/bielrv/git-cookbook)
+
 This repository contains instructions and information on how to use github.
 
 >Git is the open source distributed version control system that facilitates GitHub activities on your laptop or
@@ -35,7 +36,7 @@ desktop. This cheat sheet summarizes commonly used Git command line instructions
 # <a id="3"></a> 3. Start a new Git repository for an existing code base
 ```shell
 cd /path/to/my/codebase
-git init
+git initk
 git add .
 git commit
 ```
