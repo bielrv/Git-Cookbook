@@ -149,8 +149,11 @@ Option | Description
 **--hard**|Clears staging area and rewrites working tree from a commit when used with reset.
 **--verbose**|Be a little more verbose.
 **--global**|Applies to all repositories.
+**--local**| Write/read to the repository .git/config (default)
 **--stats**|Show all commit logs with indications when used with log.
 **--follow**|Shows a file changes even across renames when used with log.
+
+[more options here](https://git-scm.com/docs/git-config)
 
 # <a id="7"></a> 7. Git Setup
 `git config --global user.name "[firstname lastname]"` sets a name that is identifiable for credit when review version history
