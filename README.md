@@ -25,6 +25,8 @@ desktop. This cheat sheet summarizes commonly used Git command line instructions
 
 ![](git-schema.png?raw=true)
 
+Note that files are not being transfered but logs of changes (commits). This is one of the most interesting things about Git. A commit is a set of changes to the code.
+
 ***
 
 # <a id="2"></a> 2. Git files
