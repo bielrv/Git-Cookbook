@@ -1,4 +1,4 @@
-# git-cookbook [![Build Status](https://travis-ci.org/bielrv/git-cookbook.png?branch=master)](https://travis-ci.org/bielrv/git-cookbook)
+# Git's Cookbook [![Build Status](https://travis-ci.org/bielrv/git-cookbook.png?branch=master)](https://travis-ci.org/bielrv/git-cookbook)
 
 This repository contains instructions and information on how to use github.
 
@@ -32,14 +32,15 @@ Note that files are not being transfered but logs of changes (commits). This is 
 # <a id="2"></a> 2. Git files
 
 - [x] .git -> The Git repository is stored in the same directory as the project itself, in a subdirectory called .git.
-- [x] readme.md -> Generates the html summary you see at the bottom of projects
-- [x] .gitignore -> Specifies intentionally untracked files to ignore 
+- [x] readme.md -> Markdown file that generates the html summary you see at the bottom of projects in github
+- [x] .gitignore -> Specifies intentionally untracked files to ignore such as sensible data or caches
 - [x] license -> Allows an open source license in the repository to make it easier for other people to contribute
+- [x] .gitconfig -> Located at glocal or local level, establishes global configuration options  
 
 # <a id="3"></a> 3. Start a new Git repository for an existing code base
 ```shell
 cd /path/to/my/codebase
-git initk
+git init
 git add .
 git commit
 ```
@@ -93,7 +94,8 @@ git push origin master
 `git add [file]` snapshots the file in preparation for versioning\
 `git diff --staged` shows file differences between staging and the last file version\
 `git reset [file]` unstages the file, but preserve its contents\
-`git commit -m "[descriptive message]"` records file snapshots permanently in version history
+`git commit -m "[descriptive message]"` records file snapshots permanently in version history\
+`git revert [commit 01] [commit 02] ...` reverts specified commits\
 
 ***
 
@@ -120,7 +122,7 @@ git push origin master
 `git log` lists version history for the current branch\
 `git log --follow [file]` lists version history for a file, including renames\
 `git diff [first-branch]...[second-branch]` shows content differences between two branches\
-` git show [commit]` outputs metadata and content changes of the specified commit
+`git show [commit]` outputs metadata and content changes of the specified commit
 
 ***
 
