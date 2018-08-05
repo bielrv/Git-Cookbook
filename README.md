@@ -18,7 +18,8 @@ desktop. This cheat sheet summarizes commonly used Git command line instructions
 1. [Useful options](#6)
 1. [Git Setup](#7)
 1. [Git Configuration](#8)
-1. [Definitions](#9)
+1. [Git Aliases](#9)
+1. [Definitions](#10)
 ***
 
 # <a id="1"></a> 1. Git schema 
@@ -171,7 +172,34 @@ Option | Description
 `--replace-all` Default behavior is to replace at most one line. This replaces all lines matching the key (and optionally the value_regex).  
 `--add`  Adds a new line to the option without altering any existing values. This is the same as providing ^$ as the value_regex in `--replace-all`
 
-# <a id="9"></a> 9. Definitions
+# <a id="9"></a> 9. Git Aliases
+
+Git doesn’t automatically infer your command if you type it in partially.  
+Luckly, aliases can easily be set up for each command using git config.  
+
+```shell
+git config --global alias.co checkout  
+git config --global alias.br branch  
+git config --global alias.ci commit  
+git config --global alias.st status  
+```
+
+This means that, for example, instead of typing git commit, you just need to type git ci.  
+
+```shell
+git config --global alias.lg "log --oneline --decorate --all --graph"
+git lg
+
+git config --global alias.s "status -s -b"
+git s
+```
+
+Git configuration:
+```shell
+git config --global -l
+```
+
+# <a id="10"></a> 10. Definitions
 ## Branch
 A branch is a parallel version of a repository. It is contained within the repository, but does not affect the primary or master branch allowing you to work freely without disrupting the "live" version. When you've made the changes you want to make, you can merge your branch back into the master branch to publish your changes.
 
