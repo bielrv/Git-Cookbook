@@ -194,10 +194,35 @@ git config --global alias.s "status -s -b"
 git s
 ```
 
-Git configuration:
+Check Git configuration:
 ```shell
 git config --global -l
 ```
+
+Alias | Command
+------------ | -------------
+g|git
+l|log --pretty=oneline -n 20 --graph --abbrev-commit
+lg|log --oneline --decorate --all --graph
+st|status -sb
+br|branch
+patches|log -p
+cr|clone --recursive
+ci|commit
+cp|cherry-pick
+ca|!git add -A && git commit -m
+cu|!git add -u && git commit -m
+co|!f() { git checkout -b "$1" 2> /dev/null || git checkout "$1"; }; f
+sl|stash list
+sa|stash apply
+ss|stash save
+tags|tag -l
+branches|branch -a
+remotes|remote -v
+amend|commit --amend --reuse-message=HEAD
+removebranches|!git branch --merged | grep -v '\*' | xargs -n 1 git branch -d
+ds|diff --staged
+
 
 # <a id="10"></a> 10. Definitions
 ## Branch
