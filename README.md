@@ -1,3 +1,5 @@
+[![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com)
+
 # Git's Cookbook [![Build Status](https://travis-ci.org/bielrv/git-cookbook.png?branch=master)](https://travis-ci.org/bielrv/git-cookbook)
 
 This repository contains instructions and information on how to use github.
