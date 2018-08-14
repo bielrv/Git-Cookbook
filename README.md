@@ -163,9 +163,23 @@ Option | Description
 [more options here](https://git-scm.com/docs/git-config)
 
 # <a id="7"></a> 7. Git Setup
-`git config --global user.name "[firstname lastname]"` sets a name that is identifiable for credit when review version history
-`git config --global user.email "[valid.email]"` sets an email address that will be associated with each history marker
-`git config --global color.ui auto` sets automatic command line coloring for GIt for easy reviewing
+`git config --global user.name "[firstname lastname]"` sets a name that is identifiable for credit when review version history  
+`git config --global user.email "[valid.email]"` sets an email address that will be associated with each history marker  
+`git config --global color.ui auto` sets automatic command line coloring for GIt for easy reviewing  
+### Setup SSH
+SSH, also known as Secure Socket Shell, is a network protocol that provides administrators with a secure way to access a remote computer.  
+SSH is typically used to log into a remote machine and execute commands, but it also supports tunneling, forwarding TCP ports and X11 connections; it can transfer files using the associated SSH file transfer (SFTP) or secure copy (SCP) protocols.  
+1. Create ssh key
+`ssh-keygen`
+2. Press the Enter or Return key to accept the default location.  
+3. Enter and re-enter a passphrase when prompted.  
+4. Add the key to github
+5. Add the key to the ssh-agent
+```shell
+eval `ssh-agent`
+ssh-add ~/.ssh/<private_key_file>
+```  
+
 
 [Useful git cheat sheet PDF](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 
