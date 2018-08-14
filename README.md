@@ -178,6 +178,10 @@ SSH is typically used to log into a remote machine and execute commands, but it 
 ```shell
 eval `ssh-agent`
 ssh-add ~/.ssh/<private_key_file>
+```
+6. Use -k option to store git keys indefinitely
+```shell
+ssh-add -k ~/.ssh/id_rsa
 ```  
 
 
