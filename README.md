@@ -17,6 +17,7 @@ desktop. This cheat sheet summarizes commonly used Git command line instructions
    * [Synchronize changes](#5.5)
 1. [Useful options](#6)
 1. [Git Setup](#7)
+   * [Setup SSH](#7.1)
 1. [Git Configuration](#8)
 1. [Git Aliases](#9)
 1. [Definitions](#10)
@@ -166,7 +167,9 @@ Option | Description
 `git config --global user.name "[firstname lastname]"` sets a name that is identifiable for credit when review version history  
 `git config --global user.email "[valid.email]"` sets an email address that will be associated with each history marker  
 `git config --global color.ui auto` sets automatic command line coloring for GIt for easy reviewing  
-### Setup SSH
+
+##  <a id="7.1"></a>  Setup SSH 
+
 SSH, also known as Secure Socket Shell, is a network protocol that provides administrators with a secure way to access a remote computer.  
 SSH is typically used to log into a remote machine and execute commands, but it also supports tunneling, forwarding TCP ports and X11 connections; it can transfer files using the associated SSH file transfer (SFTP) or secure copy (SCP) protocols.  
 1. Create ssh key
@@ -179,11 +182,23 @@ SSH is typically used to log into a remote machine and execute commands, but it 
 eval `ssh-agent`
 ssh-add ~/.ssh/<private_key_file>
 ```
-6. Use -k option to store git keys indefinitely
+6. Use -k option to store git keys indefinitely  
 ```shell
 ssh-add -k ~/.ssh/id_rsa
 ```  
-
+7. Switch GitHub Remote from HTTPS to SSH  
+    1. Check git ssh access  
+    ```shell
+    ssh -T git@github.com
+    ```  
+    2. Check repository protocol currently being used.  If link returned started by https then HTTPS protocol is being used for that repo
+    ```shell
+    git remote -v
+    ```  
+    3. Change remote url to ssh url
+    ```shell
+    git remote set-url origin <copy-link-here>
+    ```
 
 [Useful git cheat sheet PDF](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 
