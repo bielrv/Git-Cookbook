@@ -20,6 +20,7 @@ desktop. This cheat sheet summarizes commonly used Git command line instructions
 1. [Git Configuration](#8)
 1. [Git Aliases](#9)
 1. [Definitions](#10)
+1. [Best practices](#11)
 ***
 
 # <a id="1"></a> 1. Git schema 
@@ -276,3 +277,19 @@ SSH keys are a way to identify yourself to an online server, using an encrypted 
 ## Upstream
 When talking about a branch or a fork, the primary branch on the original repository is often referred to as the "upstream", since that is the main place that other changes will come in from. The branch/fork you are working on is then called the "downstream".
 
+
+# <a id="11"></a> 11. Best practices
+
+## Useful commit messages
+Good commit messages serve at least three important purposes:  
+- To speed up the reviewing process.  
+- To help us write a good release note.  
+
+1. Write the summary line and description of what you have done in the imperative mode. Start the line with "Fix", "Add", "Change" instead of "Fixed", "Added", "Changed".
+1. Use a capital letter at the beggining of each commit
+1. Don't end the summary line with a period: it's a title and titles don't end with a period.
+1. If it seems difficult to summarize what your commit does, it may be because it includes several logical changes.
+1. Always leave the second line blank.
+1. Avoid lazy commit messages at any cost
+1. Avoid whitespace changes together with code changes
+1. Commit early and often.
