@@ -197,7 +197,7 @@ ssh-add -k ~/.ssh/id_rsa
     ```shell
     git remote -v
     ```  
-    3. Change remote url to ssh url
+    3. **Change remote url to ssh url**
     ```shell
     git remote set-url origin <copy-link-here>
     ```
