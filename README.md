@@ -24,6 +24,7 @@ desktop. This cheat sheet summarizes commonly used Git command line instructions
 1. [Git Aliases](#9)
 1. [Definitions](#10)
 1. [Best practices](#11)
+1. [Atom](#12)
 ***
 
 # <a id="1"></a> 1. Git schema 
@@ -328,3 +329,18 @@ Good commit messages serve at least three important purposes:
 1. Avoid lazy commit messages at any cost
 1. Avoid whitespace changes together with code changes
 1. Commit early and often.
+
+
+# <a id="12"></a> 12. Atom  
+Atom is included since it is github's code editor.   
+
+Useful packages:
+- atom-beautify
+- autocomplete-python  
+- hydrogen
+- markdown-writer
+- markdown-preview
+- html-preview
+
+
+
